@@ -5,5 +5,4 @@ function Index($scope, $location, $anchorScroll) {
     $location.hash('attend');
     $anchorScroll();
   }
-
 }
