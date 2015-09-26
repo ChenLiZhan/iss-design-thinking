@@ -1,0 +1,33 @@
+<style>
+    .error {
+        color: red;
+    }
+</style>
+<div class="modal-header">
+    <h3 class="modal-title">我要報名</h3>
+</div>
+<div class="modal-body">
+    <form ng-submit="submitRegist()" class="form-group">
+        <label for="name">*姓名 <span ng-show="nameEmpty" class="error">請輸入姓名</span></label>
+        <input ng-model="name" type="text" id="name" class="form-control form-block">
+        <label for="nickname">綽號</label>
+        <input ng-model="nickname" type="text" id="nickname" class="form-control form-block">
+        <label for="phone">*聯絡電話 <span ng-show="phoneEmpty" class="error">請輸入電話</span></label>
+        <input ng-model="phone" type="text" id="phone" class="form-control form-block">
+        <label for="email">*電子信箱 <span ng-show="emailEmpty" class="error">請輸入電子信箱</span></label>
+        <input ng-model="email" type="text" id="email" class="form-control form-block">
+        <label for="identity">*身份</label>
+        <select ng-model="identity" id="identity" class="form-control">
+          <option value="iss">清大服科所學生</option>
+          <option value="normal">一般學生</option>
+          <option value="society">校外人士</option>
+        </select>
+        <label for="food">*飲食狀況</label>
+        <select ng-model="food" id="food" class="form-control">
+          <option value="vegetable">葷</option>
+          <option value="meat">素</option>
+        </select>
+        <button class="btn btn-primary" type="submit">報名</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">取消</button>
+    </form>    
+</div>

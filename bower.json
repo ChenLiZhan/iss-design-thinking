@@ -13,7 +13,9 @@
     "tests"
   ],
   "dependencies": {
+    "alertify": "~0.3.10",
     "angular": "~1.4.6",
+    "angular-bootstrap": "~0.13.4",
     "angular-ui-router": "~0.2.15",
     "bootstrap": "~3.3.5"
   }

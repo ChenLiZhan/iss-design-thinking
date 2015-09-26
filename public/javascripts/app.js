@@ -1,4 +1,4 @@
-var app = angular.module('leeApp', ['ui.router'])
+var app = angular.module('leeApp', ['ui.router', 'ui.bootstrap'])
 
 app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $controllerProvider, $locationProvider) {
   $controllerProvider.allowGlobals();

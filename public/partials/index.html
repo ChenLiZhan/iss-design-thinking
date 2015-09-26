@@ -7,7 +7,7 @@
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
 					<span class="icon icon-menu"></span>
 				</button>
-				<a class="navbar-brand" href="#"><img src="img/logo.png" alt="" /></a>
+				<a class="navbar-brand" href="#"><img src="img/dt-logp.png" alt="" /></a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
@@ -25,7 +25,7 @@
 		<div class="container">
 			<div class="row form-wrapper">
 				<div class="col-md-10 col-sm-12">
-					<img src="img/slider/jssor/man1.png" class="img-responsive" alt="" />
+					<img src="img/img1-2.png" class="img-responsive" alt="" />
 				</div>
 				<div class="main-form">
 					<h3>德克斯特 <br><span>實驗室</span></h3>
@@ -33,21 +33,33 @@
 					 這次我們不談思想，我們來實踐看看。 大家對於《設計思考 Design Thinking》大概都不陌生，設身處地的觀察與提出問題，快速的做出原型驗證，緊扣著目標使用者的問題精煉，解除大腦限制的概念發想，打破組織的創新團隊合作，與回歸解決問題原點的設計初衷。
 					</p>
 					<form class="form-horizontal">
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<div class="col-lg-12">
-								<label>Name :</label>
+								<label>姓名 :</label>
 								<input type="text" class="form-control form-block" placeholder="Enter your full name">
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-lg-12">
-								<label>Email :</label>
+								<label>綽號 :</label>
 								<input type="text" class="form-control form-block" placeholder="Enter your email address">
 							</div>
 						</div>
-						<div class="form-group">
+                        <div class="form-group">
+                            <div class="col-lg-12">
+                                <label>聯絡電話 :</label>
+                                <input type="text" class="form-control form-block" placeholder="Enter your email address">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-12">
+                                <label>電子信箱 :</label>
+                                <input type="text" class="form-control form-block" placeholder="Enter your email address">
+                            </div>
+                        </div>
+ -->						<div class="form-group">
 							<div class="col-lg-12">
-								<button class="btn btn-primary btn-bavel">報名</button>
+								<button ng-click="registerModal()" class="btn btn-primary btn-bavel">我要報名</button>
 							</div>									
 						</div>									
 					</form>
@@ -70,7 +82,7 @@
             </div>
             <!-- End title -->
             <div class="row">
-                <div class="col-md-6 col-md-push-6"><img src="img/about/girl.jpg" class="img-responsive" alt=""></div>
+                <div class="col-md-6 col-md-push-6"><img src="img/img2.png" class="img-responsive" alt=""></div>
                 <div class="col-md-6 col-md-pull-6">
                     <!-- Start Tabs Features -->
                     <div id="tab-slider" class="jwg_slider_module">
@@ -200,38 +212,14 @@
             <!-- End title -->
             <!-- Start Pricing Table -->
             <div class="row">
-                <div class="col-md-3">
-                    <!-- Start Pricing Default -->
-                    <div class="pricing-table">
-                        <div class="pricing-header">
-                            <h4>NT$<span class="price">0</span></h4>
-                        </div>
-                        <div class="pricing-title">
-                            <h5>清大服科所學生</h5>
-                        </div>
-                        <!-- <div class="pricing-list">
-                            <ul>
-                                <li><b>GPL</b> Licence</li>
-                                <li><b>No</b> PSD</li>
-                                <li><b>Personal</b> Use</li>
-                                <li><b>no</b> Support</li>
-                                <li>Documentation</li>
-                            </ul>
-                        </div> -->
-                        <!-- <div class="pricing-footer">
-                            <a href="#" ng-click="scrollTop()" class="btn btn-default btn-bavel">我要報名</a>
-                        </div> -->
-                    </div>    
-                    <!-- End Pricing Default -->
-                </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <!-- Start Pricing Primary -->
                     <div class="pricing-table primary">
                         <div class="pricing-header">
-                            <h4>NT$<span class="price">14</span><h4>
+                            <h4>NT$<span class="price">300</span><h4>
                         </div>
                         <div class="pricing-title">
-                            <h5>清大學生</h5>
+                            <h5>清大服科所學生</h5>
                         </div>
                         <!-- <div class="pricing-list">
                             <ul>
@@ -248,14 +236,14 @@
                     </div>    
                     <!-- End Pricing Primary -->
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <!-- Start Pricing Secondary -->
                     <div class="pricing-table secondary">
                         <div class="pricing-header">
-                            <h4>NT$<span class="price">24</span></h4>
+                            <h4>NT$<span class="price">800</span></h4>
                         </div>
                         <div class="pricing-title">
-                            <h5>非清大學生</h5>
+                            <h5>一般學生</h5>
                         </div>
                         <!-- <div class="pricing-list">
                             <ul>
@@ -272,11 +260,11 @@
                     </div>    
                     <!-- End Pricing Secondary -->
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <!-- Start Pricing Tertiary -->
                     <div class="pricing-table tertiary">
                         <div class="pricing-header">
-                            <h4>NT$<span class="price">32</span></h4>
+                            <h4>NT$<span class="price">1,500</span></h4>
                         </div>
                         <div class="pricing-title">
                             <h5>校外人士</h5>
@@ -286,7 +274,7 @@
                 </div>
               </div>
               <div class="text-center">
-                  <a href="#" ng-click="scrollTop()" class="btn btn-lg btn-info">我要報名</a>
+                  <a href="#" ng-click="registerModal()" class="btn btn-lg btn-info">我要報名</a>
               </div>
             </div>    
             <!-- End Pricing Table -->
