@@ -6,7 +6,7 @@ var googleCreds = require('../config/local').googleCreds;
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {
-    title: 'NTHU ISS - Design Thinking'
+    title: 'NTHU ISS - Design Thinking Workshop'
   });
 });
 
