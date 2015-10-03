@@ -6,7 +6,8 @@ function Index($scope, $http, $location, $anchorScroll, $modal, $rootScope) {
       templateUrl: '/partials/register.html',
       windowClass: 'in',
       controller: ['$modalInstance', '$scope', function($modalInstance, $scope) {
-        $scope.identity = 'iss';
+        $scope.identity = 'normal';
+        $scope.showDepartment = true;
         $scope.food = 'meat';
         $scope.cancel = function() {
           $modalInstance.dismiss('cancel');
@@ -27,6 +28,9 @@ function Index($scope, $http, $location, $anchorScroll, $modal, $rootScope) {
           $scope.nameEmpty = false;
           $scope.phoneEmpty = false;
           $scope.emailEmpty = false;
+          $scope.imageEmpty = false;
+          $scope.departmentEmpty = false;
+          $scope.jobEmpty = false;
 
           if (!$scope.name) {
             $scope.nameEmpty = true;
@@ -45,6 +49,16 @@ function Index($scope, $http, $location, $anchorScroll, $modal, $rootScope) {
 
           if (!$scope.image) {
             $scope.imageEmpty = true;
+            ok = false;
+          }
+
+          if ($scope.showDepartment && !$scope.department) {
+            $scope.departmentEmpty = true;
+            ok = false;
+          }
+
+          if ($scope.showJob && !$scope.job) {
+            $scope.jobEmpty = true;
             ok = false;
           }
 

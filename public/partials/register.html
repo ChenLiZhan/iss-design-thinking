@@ -19,16 +19,16 @@
         <input ng-model="email" type="text" id="email" class="form-control form-block">
         <label for="identity">*身份</label>
         <select ng-model="identity" id="identity" class="form-control">
-          <option value="iss">清大服科所學生</option>
-          <option value="normal">一般學生</option>
-          <option value="society">校外人士</option>
+          <!-- <option value="iss">清大服科所學生</option> -->
+          <option value="normal">學生</option>
+          <option value="society">非學生</option>
         </select>
         <div ng-show="showDepartment">
-            <label for="department">就讀學校與科系</label>
+            <label for="department">*就讀學校與科系 <span ng-show="departmentEmpty" class="error">請輸入系所</span></label>
             <input ng-model="department" type="text" id="department" class="form-control form-block">
         </div>
         <div ng-show="showJob">
-            <label for="job">工作專長領域</label>
+            <label for="job">*工作專長領域 <span ng-show="jobEmpty" class="error">請輸入專長領域</span></label>
             <input ng-model="job" type="text" id="job" class="form-control form-block">
         </div>
         <label for="food">*飲食狀況</label>
