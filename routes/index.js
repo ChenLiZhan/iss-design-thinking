@@ -17,8 +17,11 @@ router.post('/register', function(req, res, next) {
   var email = req.body.email;
   var food = req.body.food;
   var identity = req.body.identity;
+  var speciality = req.body.speciality;
+  var department = req.body.department;
+  var imagination = req.body.imagination;
 
-  if (!name || !phone || !email || !food || !identity) {
+  if (!name || !phone || !email || !food || !identity || !imagination) {
     return res.json({
       error: true,
       msg: 'invalid params'
@@ -46,7 +49,10 @@ router.post('/register', function(req, res, next) {
       phone: phone,
       email: email,
       food: food,
-      identity: identity
+      identity: identity,
+      speciality: speciality,
+      department: department,
+      imagination: imagination
     }, function(err) {
       if (err) {
         return res.json({

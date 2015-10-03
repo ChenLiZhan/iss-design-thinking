@@ -12,6 +12,16 @@ function Index($scope, $http, $location, $anchorScroll, $modal, $rootScope) {
           $modalInstance.dismiss('cancel');
         };
 
+        $scope.$watch('identity', function(newVal, oldVal) {
+          $scope.showDepartment = false;
+          $scope.showJob = false
+          if (newVal === 'normal') {
+            $scope.showDepartment = true;
+          } else if (newVal === 'society') {
+            $scope.showJob = true;
+          }
+        })
+
         $scope.submitRegist = function() {
           var ok = true;
           $scope.nameEmpty = false;
@@ -33,6 +43,11 @@ function Index($scope, $http, $location, $anchorScroll, $modal, $rootScope) {
             ok = false;
           }
 
+          if (!$scope.image) {
+            $scope.imageEmpty = true;
+            ok = false;
+          }
+
           if (!ok) {
             return;
           } else {
@@ -45,7 +60,10 @@ function Index($scope, $http, $location, $anchorScroll, $modal, $rootScope) {
                 phone: $scope.phone,
                 email: $scope.email,
                 food: $scope.food,
-                identity: $scope.identity
+                identity: $scope.identity,
+                speciality: $scope.job || '',
+                department: $scope.department || '',
+                imagination: $scope.image
               }
             }).success(function(res) {
               if (res.error) {

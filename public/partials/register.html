@@ -22,11 +22,21 @@
           <option value="normal">一般學生</option>
           <option value="society">校外人士</option>
         </select>
+        <div ng-show="showDepartment">
+            <label for="department">就讀學校與科系</label>
+            <input ng-model="department" type="text" id="department" class="form-control form-block">
+        </div>
+        <div ng-show="showJob">
+            <label for="job">工作專長領域</label>
+            <input ng-model="job" type="text" id="job" class="form-control form-block">
+        </div>
         <label for="food">*飲食狀況</label>
         <select ng-model="food" id="food" class="form-control">
           <option value="vegetable">葷</option>
           <option value="meat">素</option>
         </select>
+        <label for="image">*請試著思考，想像您面前有一片森林，這是一個怎麼樣的森林呢？ <span ng-show="imageEmpty" class="error">此為必填</span></label>
+        <textarea name="image" ng-model="image" id="image" class="form-control form-block" cols="30" rows="10"></textarea>
         <button class="btn btn-primary" type="submit">報名</button>
         <button class="btn btn-warning" type="button" ng-click="cancel()">取消</button>
     </form>    
