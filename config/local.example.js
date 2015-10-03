@@ -19,5 +19,7 @@ module.exports = {
         "client_email": "",
         "client_id": "",
         "type": "service_account"
-    }
+    },
+
+    mandrill: 'KEY'
 };

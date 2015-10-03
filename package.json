@@ -13,6 +13,7 @@
     "express": "~4.13.0",
     "google-spreadsheet": "^1.0.1",
     "morgan": "~1.6.1",
+    "node-mandrill": "^1.0.1",
     "serve-favicon": "~2.3.0"
   }
 }
