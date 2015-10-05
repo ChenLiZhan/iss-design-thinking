@@ -8,7 +8,7 @@ var sendMail = require('../lib/mandrill').sendMail;
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {
-    title: '德克斯特的實驗室 | 2015設計思考工作坊'
+    title: '2015設計思考工作坊 | 德克斯特的設計思考'
   });
 });
 
@@ -36,10 +36,10 @@ router.post('/register', function(req, res, next) {
       identity = 'ISS 學生';
       break;
     case 'normal':
-      identity = '一般學生';
+      identity = '學生';
       break;
     case 'society':
-      identity = '社會人士';
+      identity = '非學生';
       break;
   }
   var my_sheet = new GoogleSpreadsheet(spreadsheet.key);
